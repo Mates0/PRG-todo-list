@@ -19,11 +19,11 @@ public class Main {
             System.out.println("2) Exit");
             int input = sc.nextInt();
             if (input < 1) {
-                System.out.println("Invalid input, please choose a correct option");
+                System.out.println("Invalid input, please choose a correct option:");
                 input = sc.nextInt();
             }
             if (input > 2) {
-                System.out.println("Invalid input, please choose a correct option");
+                System.out.println("Invalid input, please choose a correct option:");
                 input = sc.nextInt();
             }
             if (input == 2) {
@@ -37,11 +37,11 @@ public class Main {
             }
             int input2 = sc.nextInt();
             if (input2 < 1) {
-                System.out.println("Invalid input, please choose a correct option");
+                System.out.println("Invalid input, please choose a correct option:");
                 input2 = sc.nextInt();
             }
             if (input2 > 4) {
-                System.out.println("Invalid input, please choose a correct option");
+                System.out.println("Invalid input, please choose a correct option:");
                 input2 = sc.nextInt();
             }
             if (input2 == 1) {
@@ -56,23 +56,23 @@ public class Main {
                 i = i + 1;
             }
             if (input2 == 2) {
-                System.out.println("Choose the index of the task you want to update");
+                System.out.println("Choose the index of the task you want to update:");
                 int input3 = sc.nextInt();
                 if (input3 < 0) {
-                    System.out.println("Invalid input, please choose a correct option");
+                    System.out.println("Invalid input, please choose a correct option:");
                     input3 = sc.nextInt();
                 }
                 if (input3 > 10) {
-                    System.out.println("Invalid input, please choose a correct option");
+                    System.out.println("Invalid input, please choose a correct option:");
                     input3 = sc.nextInt();
                 }
                 if (input3 > i - 1) {
-                    System.out.println("This task does not exist, please choose a correct option");
+                    System.out.println("This task does not exist, please choose a correct option:");
                     input3 = sc.nextInt();
                 }
+                System.out.println("Enter name of the task:");
                 sc.nextLine();
-                String input4 = sc.nextLine();
-                input4 = array[input3];
+                array[input3] = sc.nextLine();
                 System.out.println(array[input3]);
             }
         }
