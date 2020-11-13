@@ -44,7 +44,10 @@ public class Main {
                 System.out.println("Invalid input, please choose a correct option:");
                 input2 = sc.nextInt();
             }
-            if (input2 == 1) {
+            if (input2 == 4) {
+                continue;
+            }
+            if (input2 == 1 && array[9] == null) {
                 System.out.println("Enter name of the task:");
                 sc.nextLine();
                 array[i] = sc.nextLine();
@@ -55,7 +58,7 @@ public class Main {
                 System.out.println("#" + i + " " + "-" + " " + array[i]);
                 i = i + 1;
             }
-            if (input2 == 2) {
+            if (input2 == 2 && array[0] != null) {
                 System.out.println("Choose the index of the task you want to update:");
                 int input3 = sc.nextInt();
                 if (input3 < 0) {
@@ -73,7 +76,28 @@ public class Main {
                 System.out.println("Enter name of the task:");
                 sc.nextLine();
                 array[input3] = sc.nextLine();
-                System.out.println(array[input3]);
+                System.out.println("Task with index" + " " + input3 + " " + "successfully updated!");
+            }
+            if (input2 == 3 && array[0] != null) {
+                System.out.println("Choose the index of the task you want to delete:");
+                int input4 = sc.nextInt();
+                if (input4 < 0) {
+                    System.out.println("Invalid input, please choose a correct option:");
+                    input4 = sc.nextInt();
+                }
+                if (input4 > 10) {
+                    System.out.println("Invalid input, please choose a correct option:");
+                    input4 = sc.nextInt();
+                }
+                if (input4 > i - 1) {
+                    System.out.println("This task does not exist, please choose a correct option:");
+                    input4 = sc.nextInt();
+                }
+                for (int j = input4; j < array.length - 1; j++) {
+                    array[j] = array[j + 1];
+                }
+                i = i - 1;
+                System.out.println("Index" + " " + input4 + " " + "successfully deleted!");
             }
         }
     }
