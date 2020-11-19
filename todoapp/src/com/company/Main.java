@@ -76,7 +76,6 @@ public class Main {
                 System.out.println("Enter name of the task:");
                 sc.nextLine();
                 array[input3] = sc.nextLine();
-                System.out.println("#" + input3 + " " + "-" + " " + array[input3]);
                 System.out.println("Task with index" + " " + input3 + " " + "successfully updated!");
             }
             if (input2 == 3 && array[0] != null) {
